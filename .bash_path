@@ -1,1 +1,4 @@
-PATH="~/local/android-sdk/platform-tools:~/local/android-sdk/tools:~/bin:$PATH"
+PATH="~/bin:$PATH"
+PATH="~/local/android-sdk/platform-tools:$PATH"
+PATH="~/local/android-sdk/tools:~/bin:$PATH"
+PATH="~/local/aosp_prebuilt/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin:$PATH"
