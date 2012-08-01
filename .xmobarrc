@@ -1,0 +1,16 @@
+Config {
+  font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*", 
+  bgColor = "black", 
+  fgColor = "grey", 
+  position = TopW L 100, 
+  commands = [
+    Run MultiCpu ["-t", "CPU: <total0> <total1> <total2> <total3> <total4> <total5> <total6> <total7>", "-L", "25", "-H", "75", "--normal", "orange", "--high", "red", "-m", "3"] 10, 
+    Run Memory ["-t","Mem: <usedratio>%", "-L", "25", "-H", "75", "--normal", "orange", "--high", "red", "-m", "2"] 20, 
+    Run Swap ["-t", "<usedratio>", "-L", "25", "-H", "75", "--normal", "orange", "--high", "red", "-m", "3"] 20, 
+    Run Date "%a %_d %b %H:%M:%S" "date" 10, 
+    Run StdinReader 
+  ],
+  sepChar = "%", 
+  alignSep = "}{",
+  template = "%StdinReader% }{ %multicpu% | %memory% %swap% | <fc=#ee9a00>%date%</fc>"
+}
