@@ -90,3 +90,6 @@ if [[ "$(tty)" == "/dev/tty1" ]]; then
 fi
 
 export USE_CCACHE=1
+
+set -o vi
+
