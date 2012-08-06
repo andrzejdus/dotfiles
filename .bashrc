@@ -91,5 +91,3 @@ fi
 
 export USE_CCACHE=1
 
-set -o vi
-
