@@ -1,0 +1,29 @@
+#!/bin/bash
+
+FILES_LIST=".bash_aliases .bash_logout .bash_path .bashrc .profile .vimrc .xmobarrc bin .xmonad .xsession .Xresources"
+HOME_DIR=$HOME
+BACKUP_DIR="$HOME_DIR/Dropbox/system_specific/Linux/configs/bash"
+
+if [ "$1" = "--backup" ]; then
+  echo "Backing up $FILES_LIST"
+  cd $HOME_DIR
+  cp -R $FILES_LIST $BACKUP_DIR/
+elif [ "$1" = "--restore" ]; then
+  echo "Restoring $BACKUP_DIR/$f"
+  cd $BACKUP_DIR
+  cp -R $FILES_LIST $HOME_DIR/
+  for f in $FILES_LIST; do
+    if [ -d $HOME_DIR/$f  ]; then
+      chmod 700 $HOME_DIR/$f
+    elif [ -f $HOME_DIR/$f  ]; then
+      chmod 600 $HOME_DIR/$f
+    else
+      echo "Cannot chmod $HOME_DIR/$f - not a dir or regular file"
+    fi
+  done
+  chmod 700 $HOME_DIR/bin/*
+else
+  echo "Use with --backup or --restore parameter"
+fi
+
+
