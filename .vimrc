@@ -13,6 +13,8 @@ set expandtab
 set tabstop=2
 set hls ic
 set noswapfile
+set clipboard=unnamedplus
+
 filetype plugin on
 syntax on
 colorscheme desert
