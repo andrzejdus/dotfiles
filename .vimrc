@@ -15,6 +15,10 @@ set hls ic
 set noswapfile
 set clipboard=unnamedplus
 
+" show two line status bar
+set modeline
+set ls=2
+
 filetype plugin on
 syntax on
 colorscheme desert
