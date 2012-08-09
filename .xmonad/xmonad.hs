@@ -6,6 +6,7 @@ import XMonad.Hooks.ManageDocks
 import qualified XMonad.StackSet as W
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Actions.UpdatePointer
 import System.IO
 
 main = do
@@ -17,7 +18,7 @@ main = do
     logHook = dynamicLogWithPP xmobarPP {
       ppOutput = hPutStrLn xmproc,
       ppTitle = xmobarColor "green" "" . shorten 50
-    }, 
+    } >> updatePointer (Relative 0.5 0.5), 
     modMask = mod4Mask
   } `additionalKeys` myKeys
  
