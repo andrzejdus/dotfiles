@@ -1,4 +1,11 @@
 #!/bin/bash
 
-rm "$HOME/$1"
-ln -s "`pwd`/$1" "$HOME/$1"
+SOURCE_FILE="`pwd`/$1"
+DESTINATION_FILE="$HOME/$1"
+
+echo "$SOURCE_FILE -> $DESTINATION_FILE"
+
+if [ -e $SOURCE_FILE ]; then
+  rm $DESTINATION_FILE
+  ln -s $SOURCE_FILE $DESTINATION_FILE
+fi
