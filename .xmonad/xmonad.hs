@@ -13,7 +13,7 @@ main = do
   xmproc <- spawnPipe "/usr/bin/xmobar /home/andrzej/.xmobarrc" 
   xmonad $ defaultConfig {
     workspaces = withScreens 2 myWorkspaces,
-    manageHook = manageDocks <+> manageHook defaultConfig,
+    manageHook = myManageHook <+> manageHook defaultConfig,
     layoutHook = avoidStruts  $  layoutHook defaultConfig,
     logHook = dynamicLogWithPP xmobarPP {
       ppOutput = hPutStrLn xmproc,
@@ -23,6 +23,11 @@ main = do
   } `additionalKeys` myKeys
  
 myWorkspaces = ["term","code","web","notes","temp"]
+
+myManageHook = composeAll
+  [ className =? "Google-chrome" --> doShift "1_web"
+  , manageDocks
+  ]
  
 myKeys = [
       ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
