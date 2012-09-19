@@ -4,7 +4,7 @@ xmodmap ~/.capslock_remap
 
 xrandr --output VGA-1 --auto --right-of DVI-I-1
 
-synergys
+synergys --name server
 
 xscreensaver &
 
