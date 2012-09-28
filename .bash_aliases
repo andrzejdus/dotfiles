@@ -19,8 +19,10 @@ alias s='su -'
 alias ash='sudo aptsh'
 
 #other
-alias cdrepos='cd ~/important/share/repos'
+alias cdrepos='cd ~/repos'
 alias ge='gedit'
 function tvim() { uxterm -e vim "$@" ; }
 
-# ssh servers
+if [ -f ~/.bash_aliases_private ]; then
+    . ~/.bash_aliases_private
+fi

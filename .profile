@@ -21,4 +21,4 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-sudo loadkeys .keymap
+#sudo loadkeys .keymap
