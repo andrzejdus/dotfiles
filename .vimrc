@@ -11,9 +11,9 @@ set expandtab
 set tabstop=2
 set showmatch " set show matching parenthesis
 set noswapfile 
-set title                " change the terminal's title
-set visualbell           " don't beep
-set noerrorbells         " don't beep
+set title " change the terminal's title
+set visualbell " don't beep
+set noerrorbells " don't beep
 
 set clipboard=unnamedplus
 
@@ -34,8 +34,8 @@ set pastetoggle=<F2>
 let mapleader=","
 
 " quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>ve :e $MYVIMRC<CR>
+nmap <silent> <leader>vs :so $MYVIMRC<CR>
 
 " remap : to ;
 nnoremap ; :
@@ -72,3 +72,8 @@ filetype plugin indent on
 " plugins under the ~/.vim/bundle directory
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+
+" eclim
+nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
+nnoremap <silent> <buffer> <leader>jd :JavaDocSearch -x declarations<cr>
+nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
