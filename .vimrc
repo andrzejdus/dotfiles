@@ -34,8 +34,11 @@ set pastetoggle=<F2>
 let mapleader=","
 
 " quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>ve :e $MYVIMRC<CR>
+nmap <silent> <leader>vs :so $MYVIMRC<CR>
+
+" toggle cursorline
+map <silent> <Leader>c :set cursorline!<CR>
 
 " remap : to ;
 nnoremap ; :
@@ -53,10 +56,10 @@ map <left> <nop>
 map <right> <nop>
 
 " window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+" map <C-h> <C-w>h
+" map <C-j> <C-w>j
+" map <C-k> <C-w>k
+" map <C-l> <C-w>l
 
 " tab navigation
 
