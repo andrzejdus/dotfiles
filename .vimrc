@@ -30,6 +30,12 @@ set ls=2
 
 set pastetoggle=<F2>
 
+" gui settings
+set guioptions=-r
+set guioptions=-R
+set guioptions=-l
+set guioptions=-L
+
 " change the mapleader from \ to ,
 let mapleader=","
 
