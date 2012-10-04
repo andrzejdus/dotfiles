@@ -1,78 +1,120 @@
+# Main
 snippet main
-	public static void main (String [] args)
-	{
-		${1:/* code */}
+	public static void main (String [] args) {
+		${1:/* TODO code */}
 	}
+# Imports
+snippet im
+	import
+# Access modifiers
 snippet pu
 	public
 snippet po
 	protected
 snippet pr
 	private
+# Other modifiers
 snippet st
 	static
 snippet fi
 	final
 snippet ab
 	abstract
-snippet re
-	return
-snippet br
-	break;
-snippet de
-	default:
-		${1}
-snippet ca
-	catch(${1:Exception} ${2:e}) ${3}
-snippet th
-	throw 
 snippet sy
 	synchronized
-snippet im
-	import
-snippet j.u
-	java.util
-snippet j.i
-	java.io.
-snippet j.b
-	java.beans.
-snippet j.n
-	java.net.
-snippet j.m
-	java.math.
+# Return
+snippet re
+	return
+# If Condition
 snippet if
-	if (${1}) ${2}
-snippet el
-	else 
+	if (${1:/* TODO condition */}) {
+		${2:/* TODO code */}
+	}
 snippet elif
-	else if (${1}) ${2}
+	else if (${1:/* TODO condition */}) {
+		${2:/* TODO code */}
+	}
+snippet el
+	else {
+		${1:/* TODO code */}
+	}
+# Tertiary conditional
+snippet tc
+	${1:/* TODO condition */} ? ${2:a} : ${3:b}
+# Do While Loop
+snippet do
+	do {
+		${2:/* code */}
+	} while (${1:/* TODO condition */});
+# While Loop
 snippet wh
-	while (${1}) ${2}
+	while (${1:/* TODO condition */}) {
+		${2:/* TODO code */}
+	}
+# For Loop
 snippet for
-	for (${1}; ${2}; ${3}) ${4}
+	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+		${4:/* TODO code */}
+	}
+# Custom For Loop
+snippet forr
+	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
+		${5:/* TODO code */}
+	}
+# For Each Loop
 snippet fore
-	for (${1} : ${2}) ${3}
+	for (${1} : ${2}) {
+		${3}
+	}
+# Switch
 snippet sw
-	switch (${1}) ${2}
-snippet cs
+	switch (${1}) {
+		${2}
+	}
+snippet ca
 	case ${1}:
 		${2}
-	${3}
-snippet tc
-	public class ${1:`Filename()`} extends ${2:TestCase}
-snippet t
-	public void test${1:Name}() throws Exception ${2}
-snippet cl
-	class ${1:`Filename("", "untitled")`} ${2}
-snippet in
-	interface ${1:`Filename("", "untitled")`} ${2:extends Parent}${3}
+		break;
+snippet br
+	break;
+snippet def
+	default:
+		${1}
+# Exceptions
+snippet try
+	try { 
+		${1:/* TODO code */}
+	}
+	${2}
+snippet cat
+	catch(${1:Exception} ${2:e}) { 
+		${3:/* TODO code */}
+	}
+	${4}
+snippet fin
+	finally { 
+		${1:/* TODO code */}
+	}
+	${2}
+# Class
+snippet c
+	class ${1:`Filename("", "untitled")`} {
+		${2:/* TODO code */}
+	}
+snippet i
+	interface ${1:`Filename("", "untitled")`} ${2:extends Parent} {
+		${3:/* TODO code */}
+	}
+# Methods
 snippet m
-	${1:void} ${2:method}(${3}) ${4:throws }${5}
+	${1:void} ${2:method}(${3}) {
+		${4:/* TODO code */}
+	}
+	${5}
+# Variables
 snippet v
-	${1:String} ${2:var}${3: = null}${4};${5}
-snippet co
-	static public final ${1:String} ${2:var} = ${3};${4}
-snippet cos
-	static public final String ${1:var} = "${2}";${3}
-snippet as
-	assert ${1:test} : "${2:Failure message}";${3}
+	${1:String} ${2:var}${3: = null}${4};
+	${5}
+snippet asssert
+	assert ${1:test} : "${2:Failure message}";
+	${3}
