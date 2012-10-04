@@ -11,9 +11,9 @@ set expandtab
 set tabstop=2
 set showmatch " set show matching parenthesis
 set noswapfile 
-set title                " change the terminal's title
-set visualbell           " don't beep
-set noerrorbells         " don't beep
+set title " change the terminal's title
+set visualbell " don't beep
+set noerrorbells " don't beep
 
 set clipboard=unnamedplus
 
@@ -75,3 +75,8 @@ filetype plugin indent on
 " plugins under the ~/.vim/bundle directory
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+
+" eclim
+nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
+nnoremap <silent> <buffer> <leader>jd :JavaDocSearch -x declarations<cr>
+nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
