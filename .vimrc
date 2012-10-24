@@ -15,7 +15,7 @@ set title " change the terminal's title
 set visualbell " don't beep
 set noerrorbells " don't beep
 
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " search
 set incsearch
@@ -77,3 +77,10 @@ call pathogen#runtime_append_all_bundles()
 nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
 nnoremap <silent> <buffer> <leader>jd :JavaDocSearch -x declarations<cr>
 nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
+
+set guioptions-=r 
+set guioptions-=R 
+set guioptions-=l 
+set guioptions-=L 
+set guioptions-=e 
+set gfn=Andale\ Mono:h13
