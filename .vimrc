@@ -62,12 +62,13 @@ map <left> <nop>
 map <right> <nop>
 
 " window navigation
-" map <C-h> <C-w>h
-" map <C-j> <C-w>j
-" map <C-k> <C-w>k
-" map <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " tab navigation
+cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " map w!! to sudo write
 cmap w!! w !sudo tee % >/dev/null
