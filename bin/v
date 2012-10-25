@@ -1,3 +1,8 @@
 #!/bin/bash
-
-mvim $1
+COMMAND_GVIM="`command -v gvim`"
+echo $COMMAND_GVIM
+if [ -n $COMMAND_GVIM ]; then
+  gvim $1
+else
+  mvim $1
+fi
