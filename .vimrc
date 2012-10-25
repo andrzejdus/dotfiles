@@ -93,4 +93,4 @@ set guioptions-=R
 set guioptions-=l 
 set guioptions-=L 
 set guioptions-=e 
-set gfn=Andale\ Mono:h13
+" set gfn=Andale\ Mono:h13
