@@ -30,6 +30,10 @@ set ls=2
 
 set pastetoggle=<F2>
 
+" tab completion style
+set wildmode=longest,list,full
+set wildmenu
+
 " gui settings
 set guioptions=-r
 set guioptions=-R
