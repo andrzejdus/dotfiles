@@ -9,9 +9,13 @@ xmonad.hi
 
 # vim general
 .VimballRecord
+.vim/.netrwhist
 
 # vim commant-t
 .vim/ruby/command-t/Makefile
 .vim/ruby/command-t/ext.so
 .vim/ruby/command-t/mkmf.log
 .vim/ruby/command-t/ext.bundle
+
+# vim commant-t
+.vim/eclim

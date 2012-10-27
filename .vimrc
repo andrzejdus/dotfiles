@@ -30,6 +30,10 @@ set ls=2
 
 set pastetoggle=<F2>
 
+" tab completion style
+set wildmode=longest,list,full
+set wildmenu
+
 " gui settings
 set guioptions-=r 
 set guioptions-=R 
@@ -64,12 +68,13 @@ map <left> <nop>
 map <right> <nop>
 
 " window navigation
-" map <C-h> <C-w>h
-" map <C-j> <C-w>j
-" map <C-k> <C-w>k
-" map <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " tab navigation
+cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " map w!! to sudo write
 cmap w!! w !sudo tee % >/dev/null
@@ -88,4 +93,3 @@ filetype plugin indent on
 nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
 nnoremap <silent> <buffer> <leader>jd :JavaDocSearch -x declarations<cr>
 nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
-

@@ -21,7 +21,7 @@ alias ash='sudo aptsh'
 #other
 alias cdrepos='cd ~/repos'
 alias ge='gedit'
-function tvim() { uxterm -e vim "$@" ; }
+gvim () { command gvim --remote-silent $@ || command gvim $@; }
 
 if [ -f ~/.bash_aliases_private ]; then
     . ~/.bash_aliases_private
