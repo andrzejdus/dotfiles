@@ -31,10 +31,12 @@ set ls=2
 set pastetoggle=<F2>
 
 " gui settings
-set guioptions=-r
-set guioptions=-R
-set guioptions=-l
-set guioptions=-L
+set guioptions-=r 
+set guioptions-=R 
+set guioptions-=l 
+set guioptions-=L 
+set guioptions-=e 
+set gfn=Andale\ Mono:h13
 
 " change the mapleader from \ to ,
 let mapleader=","
@@ -79,17 +81,11 @@ filetype plugin indent on
 
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags()
+" call pathogen#runtime_append_all_bundles()
 
 " eclim
 nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
 nnoremap <silent> <buffer> <leader>jd :JavaDocSearch -x declarations<cr>
 nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
 
-set guioptions-=r 
-set guioptions-=R 
-set guioptions-=l 
-set guioptions-=L 
-set guioptions-=e 
-set gfn=Andale\ Mono:h13
