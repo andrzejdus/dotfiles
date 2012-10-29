@@ -34,13 +34,6 @@ set pastetoggle=<F2>
 set wildmode=longest,list,full
 set wildmenu
 
-" gui settings
-set guioptions-=r 
-set guioptions-=R 
-set guioptions-=l 
-set guioptions-=L 
-set guioptions-=e 
-set gfn=Andale\ Mono:h13
 
 " change the mapleader from \ to ,
 let mapleader=","
@@ -93,3 +86,14 @@ call pathogen#runtime_append_all_bundles()
 nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
 nnoremap <silent> <buffer> <leader>jd :JavaDocSearch -x declarations<cr>
 nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
+
+" gui settings
+set guioptions-=r 
+set guioptions-=R 
+set guioptions-=l 
+set guioptions-=L 
+set guioptions-=e 
+set guioptions-=m 
+set guioptions+=c 
+set guioptions-=T 
+" set gfn=Andale\ Mono:h13
