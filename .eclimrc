@@ -4,3 +4,6 @@
 # increase perm gen size
 -XX:PermSize=64m
 -XX:MaxPermSize=128m
+
+# workspace
+osgi.instance.area.default=@user.home/local/eclim_projects
