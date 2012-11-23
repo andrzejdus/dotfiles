@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export USE_CCACHE=1
+export CCACHE_DIR=<path-to-your-cache-directory>
+prebuilts/misc/linux-x86/ccache/ccache -M 50G
