@@ -22,8 +22,8 @@ main = do
     logHook = dynamicLogWithPP xmobarPP {
       ppOutput = hPutStrLn xmproc,
       ppTitle = xmobarColor "green" "" . shorten 50
-    }, 
-    -- } >> updatePointer (Relative 0.5 0.5), 
+    -- }, 
+    } >> updatePointer (Relative 0.5 0.5), 
     modMask = mod4Mask
   } `additionalKeys` myKeys
  
