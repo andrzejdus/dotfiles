@@ -15,6 +15,7 @@ set title " change the terminal's title
 set visualbell " don't beep
 set noerrorbells " don't beep
 set timeoutlen=100000 " disable leader timeout
+set nomousehide
 
 " set clipboard=unnamedplus
 
@@ -47,7 +48,7 @@ nmap <silent> <leader>vs :so $MYVIMRC<CR>
 map <silent> <Leader>c :set cursorline!<CR>
 
 " remap : to ;
-nnoremap ; :
+nnoremap ; q:i
 
 " remap ; to <leader>;
 nnoremap <leader>; ;
