@@ -1,3 +1,9 @@
+"
+" --- initial settings
+"
+
+" get hostname
+let hostname = substitute(system('hostname'), '\n', '', '')
 
 "
 " --- plugins ---
@@ -64,7 +70,9 @@ set guioptions-=e
 set guioptions-=m 
 set guioptions+=c 
 set guioptions-=T 
-" set gfn=Andale\ Mono:h13
+if hostname == "Andrzejs-MacBook-Air"
+  set gfn=Andale\ Mono:h13
+endif
 
 "
 " --- maps --- "
