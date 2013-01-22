@@ -16,6 +16,7 @@ filetype plugin indent on
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+
 "
 " --- settings ---
 "
@@ -74,9 +75,11 @@ if hostname == "Andrzejs-MacBook-Air"
   set gfn=Andale\ Mono:h13
 endif
 
+
 "
 " --- maps --- "
 "
+
 
 " toggle cursorline
 map <silent> <Leader>c :set cursorline!<CR>
@@ -106,9 +109,11 @@ cnoremap sov so $MYVIMRC
 " map w!! to sudo write
 cnoremap w!! w !sudo tee % >/dev/null
 
+
 " 
 " --- leader maps ---
 "
+
 
 " change the mapleader from \ to ,
 let mapleader=","
@@ -116,7 +121,7 @@ let mapleader=","
 " remap ; to <leader>;
 nnoremap <leader>; ;
 
-"This unsets the last search pattern register by hitting return
+" unsets the last search pattern register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
 " eclim
