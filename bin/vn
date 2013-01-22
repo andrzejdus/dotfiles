@@ -1,0 +1,7 @@
+#!/bin/bash
+COMMAND_GVIM="`command -v gvim`"
+if [ -n "$COMMAND_GVIM" ]; then
+  gvim $1
+else
+  mvim $1
+fi
