@@ -41,14 +41,15 @@ set wildmenu
 let mapleader=","
 
 " quickly edit/reload the vimrc file
-nmap <silent> <leader>ve :e $MYVIMRC<CR>
-nmap <silent> <leader>vs :so $MYVIMRC<CR>
+cnoremap ev e $MYVIMRC
+cnoremap sov so $MYVIMRC
 
 " toggle cursorline
 map <silent> <Leader>c :set cursorline!<CR>
 
 " remap : to ;
-nnoremap ; q:i
+nnoremap ; :
+" nnoremap ; q:i
 
 " remap ; to <leader>;
 nnoremap <leader>; ;
@@ -68,11 +69,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" tab navigation
-cabbrev tabv tab sview +setlocal\ nomodifiable
-
 " map w!! to sudo write
-cmap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null
 
 syntax on
 colorscheme desert
