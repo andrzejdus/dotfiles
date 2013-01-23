@@ -31,6 +31,9 @@ myWorkspaces = ["term","code","web","notes","temp"]
 
 myManageHook = composeAll
   [ className =? "Google-chrome" --> doShift "1_web"
+  , className =? "emulator-arm" --> doFloat
+  , className =? "emulator64-arm" --> doFloat
+  -- , className =? "emulator64-arm" --> doIgnore
   , manageDocks
   ]
  
