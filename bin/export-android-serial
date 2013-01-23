@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export ANDROID_SERIAL="0A3C2D8E0F00700A"

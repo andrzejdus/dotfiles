@@ -18,6 +18,9 @@ alias la='ls -la'
 alias s='su -'
 alias ash='sudo aptsh'
 
+#android
+alias androidc='adb reboot bootloader; make -j8 && fastboot flash system && fastboot reboot'
+
 #other
 alias cdrepos='cd ~/repos'
 alias ge='gedit'
