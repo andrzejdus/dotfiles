@@ -31,10 +31,10 @@ set copyindent " copy the previous indentation on autoindenting
 set number
 set ruler
 set showcmd
-set sw=2
+set sw=4 " se shift width
 set smarttab
 set expandtab
-set tabstop=2
+set tabstop=4
 set showmatch " set show matching parenthesis
 set noswapfile 
 set title " change the terminal's title
@@ -42,6 +42,7 @@ set visualbell " don't beep
 set noerrorbells " don't beep
 set timeoutlen=100000 " disable leader timeout
 set nomousehide
+set hidden 
 
 " set clipboard=unnamedplus
 
@@ -80,9 +81,6 @@ endif
 " --- maps --- "
 "
 
-
-" toggle cursorline
-map <silent> <Leader>c :set cursorline!<CR>
 
 " disable cursor keys
 map <up> <C-y>
@@ -123,6 +121,15 @@ nnoremap <leader>; ;
 
 " unsets the last search pattern register
 nmap <silent> <leader>/ :nohlsearch<CR>
+
+" toggle cursorline
+map <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" next buffer
+nmap <silent> <leader>f :bn<CR>
+
+" previous buffer
+nmap <silent> <leader>d :bp<CR>
 
 " eclim
 nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
