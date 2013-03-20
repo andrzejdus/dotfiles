@@ -1,18 +1,15 @@
-# Main
-snippet main
-	public static void main (String [] args) {
-		${1:/* TODO code */}
-	}
 # Imports
 snippet im
 	import
+
 # Access modifiers
-snippet pu
+snippet pub
 	public
-snippet po
+snippet pro
 	protected
-snippet pr
+snippet pri
 	private
+
 # Other modifiers
 snippet st
 	static
@@ -20,11 +17,13 @@ snippet fi
 	final
 snippet ab
 	abstract
-snippet sy
+snippet sync
 	synchronized
+
 # Return
-snippet re
+snippet ret
 	return
+
 # If Condition
 snippet if
 	if (${1:/* TODO condition */}) {
@@ -38,40 +37,47 @@ snippet el
 	else {
 		${1:/* TODO code */}
 	}
+
 # Tertiary conditional
 snippet tc
 	${1:/* TODO condition */} ? ${2:a} : ${3:b}
+	
 # Do While Loop
 snippet do
 	do {
 		${2:/* code */}
 	} while (${1:/* TODO condition */});
+	
 # While Loop
 snippet wh
 	while (${1:/* TODO condition */}) {
 		${2:/* TODO code */}
 	}
+	
 # For Loop
 snippet for
 	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
 		${4:/* TODO code */}
 	}
+	
 # Custom For Loop
 snippet forr
 	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
 		${5:/* TODO code */}
 	}
+	
 # For Each Loop
 snippet fore
 	for (${1} : ${2}) {
 		${3}
 	}
+	
 # Switch
 snippet sw
 	switch (${1}) {
 		${2}
 	}
-snippet ca
+snippet case
 	case ${1}:
 		${2}
 		break;
@@ -80,22 +86,24 @@ snippet br
 snippet def
 	default:
 		${1}
+
 # Exceptions
 snippet try
 	try { 
 		${1:/* TODO code */}
 	}
 	${2}
-snippet cat
+snippet catch
 	catch(${1:Exception} ${2:e}) { 
 		${3:/* TODO code */}
 	}
 	${4}
-snippet fin
+snippet finally
 	finally { 
 		${1:/* TODO code */}
 	}
 	${2}
+
 # Class
 snippet c
 	class ${1:`Filename("", "untitled")`} {
@@ -105,12 +113,33 @@ snippet i
 	interface ${1:`Filename("", "untitled")`} ${2:extends Parent} {
 		${3:/* TODO code */}
 	}
+
 # Methods
 snippet m
 	${1:void} ${2:method}(${3}) {
 		${4:/* TODO code */}
 	}
 	${5}
+snippet pubm
+	public ${1:void} ${2:method}(${3}) {
+		${4:/* TODO code */}
+	}
+	${5}
+snippet prim
+	private ${1:void} ${2:method}(${3}) {
+		${4:/* TODO code */}
+	}
+	${5}
+snippet prom
+	protected ${1:void} ${2:method}(${3}) {
+		${4:/* TODO code */}
+	}
+	${5}
+snippet main
+	public static void main (String [] args) {
+		${1:/* TODO code */}
+	}
+
 # Variables
 snippet v
 	${1:String} ${2:var}${3: = null}${4};
