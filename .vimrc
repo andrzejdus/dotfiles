@@ -101,11 +101,12 @@ nnoremap ; :
 " nnoremap ; q:i
 
 " quickly edit/reload the vimrc file
-cnoremap ev e $MYVIMRC
-cnoremap sov so $MYVIMRC
+" cnoremap ev e $MYVIMRC
+cabbrev ev e $MYVIMRC
+cabbrev sov so $MYVIMRC
 
 " map w!! to sudo write
-cnoremap w!! w !sudo tee % >/dev/null
+cabbrev w!! w !sudo tee % >/dev/null
 
 
 " 
@@ -133,6 +134,7 @@ nmap <silent> <leader>d :bp<CR>
 
 " eclim
 nnoremap <silent> <buffer> <leader>ji :JavaImport<cr>
+nnoremap <silent> <buffer> <leader>jc :JavaCorrent<cr>
 nnoremap <silent> <buffer> <leader>jd :JavaDocSearch -x declarations<cr>
 nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
 
