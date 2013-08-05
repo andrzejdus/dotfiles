@@ -6,6 +6,7 @@ import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
 import XMonad.Layout.IndependentScreens
 import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig(additionalKeys)
@@ -15,6 +16,7 @@ main = do
   xmproc <- spawnPipe "/usr/bin/xmobar /home/andrzej/.xmobarrc" 
   xmonad $ defaultConfig {
     workspaces = withScreens 2 myWorkspaces,
+    startupHook = ewmhDesktopsStartup >> setWMName "LG3D",
     manageHook = myManageHook <+> manageHook defaultConfig,
     layoutHook = myLayout,
     -- for Chrome fullscreen
@@ -23,7 +25,7 @@ main = do
       ppOutput = hPutStrLn xmproc,
       ppTitle = xmobarColor "green" "" . shorten 50
     -- }, 
-    } >> updatePointer (Relative 0.5 0.5), 
+    }, 
     modMask = mod4Mask
   } `additionalKeys` myKeys
  
