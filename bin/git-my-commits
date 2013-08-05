@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git log -p --author="a\.dus" --since="$1"
+git log --ignore-all-space -p --author="a\.dus" --since="$1"
