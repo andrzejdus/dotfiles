@@ -1,8 +1,0 @@
-#!/bin/bash
-
-read -d '' EXPRESSION <<"EOF"
-clear Lock
-keycode 0x42 = Escape
-EOF
-
-echo $EXPRESSIONS | xmodmap -
