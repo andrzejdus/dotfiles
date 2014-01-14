@@ -5,3 +5,6 @@ PATH="~/local/aosp_prebuilt/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin:$PAT
 PATH="~/local/eclipse/:$PATH"
 PATH="~/local/smlnj/bin/:$PATH"
 PATH="~/local/idea/bin:$PATH"
+PATH="~/local/WebStorm/bin:$PATH"
+PATH="~/local/tizen-sdk/tools:$PATH"
+export PATH="$PATH"
