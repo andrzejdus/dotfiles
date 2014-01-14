@@ -6,6 +6,7 @@ import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ICCCMFocus
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.IndependentScreens
 import XMonad.Layout.Spacing
@@ -21,7 +22,7 @@ main = do
     layoutHook = myLayout,
     -- for Chrome fullscreen
     handleEventHook = fullscreenEventHook,
-    logHook = dynamicLogWithPP xmobarPP {
+    logHook = takeTopFocus >> dynamicLogWithPP xmobarPP {
       ppOutput = hPutStrLn xmproc,
       ppTitle = xmobarColor "green" "" . shorten 50
     -- }, 
@@ -45,6 +46,11 @@ myKeys = [
       , ((mod4Mask, xK_i), spawn "google-chrome")
       , ((mod4Mask, xK_u), spawn "uxterm")
       , ((mod4Mask, xK_F12), spawn "xscreensaver-command -lock")
+      , ((mod4Mask, xK_KP_Add), spawn "amixer sset 'Master' 2%+")
+      , ((mod4Mask, xK_KP_Subtract), spawn "amixer sset 'Master' 2%-")
+      , ((mod4Mask, xK_KP_Left), spawn "mdbus2 org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")
+      , ((mod4Mask, xK_KP_Begin), spawn "mdbus2 org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
+      , ((mod4Mask, xK_KP_Right), spawn "mdbus2 org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
     ]
     ++
     [
