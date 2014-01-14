@@ -8,9 +8,10 @@ Config {
     Run Memory ["-t","Mem: <usedratio>%", "-L", "25", "-H", "75", "--normal", "orange", "--high", "red", "-m", "2"] 20, 
     Run Swap ["-t", "<usedratio>", "-L", "25", "-H", "75", "--normal", "orange", "--high", "red", "-m", "3"] 20, 
     Run Date "%a %_d %b %H:%M:%S" "date" 10, 
+    Run Com "/home/andrzej/bin/get-volume" [""] "vol" 5, 
     Run StdinReader 
   ],
   sepChar = "%", 
   alignSep = "}{",
-  template = "%StdinReader% }{ %multicpu% | %memory% %swap% | <fc=#ee9a00>%date%</fc>"
+  template = "%StdinReader% }{ %multicpu% | %memory% %swap% | Vol: <fc=#ee9a00>%vol%</fc> | <fc=#ee9a00>%date%</fc>"
 }
