@@ -45,25 +45,6 @@ alias gifft='g difftool'
 alias gerget='g mergetool'
 alias gl='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
-#function glog() {
-   # FIXME: --no-minor doesn't work yet, because git-log's being weird.
-   # FIXME: Remove --no-granules and --no-minor from the $*
-#   g log --graph --date-order --cherry-mark --left-right \
-#      --all-match -E ${${*[(r)--no-granules]}:+--grep='^[^\+]'} ${${*[(r)--no-minor]}:+--grep='^([^\(]|\([^-])'} \
-#      --color --abbrev=5 --pretty=solarized-parseable $* \
-#   | ruby -an -F"\u001F" -r '~/.source/format-glog' -e 'puts format_glog($F).join' \
-#   | less -SRXF }
-#function omglog() {
-#   glog --all $* $(git log -g --pretty=format:%h) }
-
-# alternatives, using the 'stage' metaphor
-alias stage='g add'
-alias unstage='g reset'
-alias staged='gist'
-alias unstiff='giff' # unstaged diff
-alias stiff='giff --cached' # staged diff
-alias stiff-last='giff HEAD^ HEAD' # last commit diff
-
 if [ -f ~/.bash_aliases_private ]; then
     . ~/.bash_aliases_private
 fi
