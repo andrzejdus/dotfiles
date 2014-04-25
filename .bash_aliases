@@ -43,6 +43,7 @@ alias gash='g stash'
 alias giff='g diff --patch-with-stat -M -C --find-copies-harder -l64'
 alias gifft='g difftool'
 alias gerget='g mergetool'
+alias gl='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
 #function glog() {
    # FIXME: --no-minor doesn't work yet, because git-log's being weird.
