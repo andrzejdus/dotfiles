@@ -81,7 +81,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-if [ "$TERM" == "linux" ] && [ -f ~/.bash_path ]; then
+if [ "$TERM" == "linux" ] || [ "$TERM" == "xterm-256color" ] && [ -f ~/.bash_path ]; then
     . ~/.bash_path
 fi
 

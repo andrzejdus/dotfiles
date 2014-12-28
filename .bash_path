@@ -1,10 +1,10 @@
 PATH="~/bin:$PATH"
 PATH="~/local/android-sdk-linux/platform-tools:$PATH"
 PATH="~/local/android-sdk-linux/tools:$PATH"
-PATH="~/local/aosp_prebuilt/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin:$PATH"
 PATH="~/local/eclipse/:$PATH"
 PATH="~/local/smlnj/bin/:$PATH"
 PATH="~/local/idea/bin:$PATH"
 PATH="~/local/WebStorm/bin:$PATH"
-PATH="~/local/tizen-sdk/tools:$PATH"
+PATH="~/local/phantomjs-1.9.8-macosx/bin:$PATH"
+
 export PATH="$PATH"
