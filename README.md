@@ -1,3 +1,3 @@
-linux-configs
+dotfiles
 =============
 My precious bash configuration files.
