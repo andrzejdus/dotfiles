@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.vim: .vim
+    ~/.keymap: .keymap
+    ~/.xsession: .xsession
+    ~/.Xmodmap: .Xmodmap
+    ~/.gitconfig: .gitconfig
+    ~/.vimrc: .vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
