@@ -11,6 +11,7 @@
     ~/.Xmodmap: .Xmodmap
     ~/.gitconfig: .gitconfig
     ~/.vimrc: .vimrc
+    ~/.tmux.conf: .tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
