@@ -1,3 +1,0 @@
-#!/bin/bash
-
-git log --ignore-all-space -p --author="a\.dus" --since="$1"

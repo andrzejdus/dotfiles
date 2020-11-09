@@ -1,7 +1,0 @@
-#!/bin/bash
-COMMAND_GVIM="`command -v gvim`"
-if [ -n "$COMMAND_GVIM" ]; then
-  gvim --remote $1
-else
-  mvim --remote $1
-fi
