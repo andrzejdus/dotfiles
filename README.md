@@ -6,7 +6,7 @@ My precious bash configuration files. :sunglasses:
 
 You have to install zsh and chezmoi manually. Then install additional scripts (including oh-my-zsh) using following command)
 
-curl -sfL https://git.io/JkIKE | sh
+    curl -sfL https://git.io/JkIKE | sh
 
 # What's in there?
 
