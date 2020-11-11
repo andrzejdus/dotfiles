@@ -1,5 +1,15 @@
 #!/bin/sh
 
+if ! command -v zsh > /dev/null 2>&1; then
+    echo "zsh not found"
+    exit
+fi
+
+if ! command -v chezmoi > /dev/null 2>&1; then
+    echo "chezmoi not found"
+    exit
+fi
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
