@@ -1,3 +1,5 @@
 {{- $email := promptString "email" -}}
+{{- $hostname_color := promptString "hostname color" -}}
 [data]
     email = "{{ $email }}"
+    hostname_color = "{{ $hostname_color }}"
