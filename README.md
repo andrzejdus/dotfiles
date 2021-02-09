@@ -10,7 +10,7 @@ You probably need installing zsh from package
 ```sh
 sudo apt install zsh
 ```
-and chezmoi by following their [INSTALL.md](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md) (notice that if you are using their install script it installs itself in .bin so beware where you are runiing their install script)
+and chezmoi by following their [INSTALL.md](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md) (notice that if you are using their install script it installs itself in .bin so beware where you are running their install script)
 
 Then install additional scripts (including oh-my-zsh) using following command:
 
