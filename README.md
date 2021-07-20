@@ -6,7 +6,7 @@ My precious bash configuration files. :sunglasses:
 
 You have to install zsh and [chezmoi](https://github.com/twpayne/chezmoi) manually.
 
-You probably need installing zsh from package
+You may instal zsh from package (remember to set it as active sheel)
 ```sh
 sudo apt install zsh
 ```
