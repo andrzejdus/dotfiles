@@ -1,0 +1,7 @@
+#!/bin/sh
+
+for dngFile in `ls *.DNG`
+do
+	name=$(echo $dngFile | cut -d'.' -f 1).JPG
+	rm $name
+done
