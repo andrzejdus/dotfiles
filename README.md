@@ -23,5 +23,5 @@ After next login everything should work.
 # What's in there?
 
 * zsh
-* oh-my-zsh with [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme that uses powerline fonts
+* oh-my-zsh with [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme that uses powerline fonts (check nerdfont)
 * [chezmoi](https://github.com/twpayne/chezmoi)
