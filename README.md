@@ -20,6 +20,9 @@ curl -sfL https://git.io/JkIKE | sh
 
 After next login everything should work.
 
+# useful stuff
+* [Quick start - chezmoi - documentation](https://www.chezmoi.io/quick-start/)
+
 # What's in there?
 
 * zsh
