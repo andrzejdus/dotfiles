@@ -4,15 +4,24 @@ My precious bash configuration files. :sunglasses:
 
 # Installation
 
-You have to install zsh and [chezmoi](https://github.com/twpayne/chezmoi) manually.
-
-You may instal zsh from package (remember to set it as active sheel)
+### Install zsh
 ```sh
 sudo apt install zsh
 ```
-and chezmoi by following their [INSTALL.md](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md) (notice that if you are using their install script it installs itself in .bin so beware where you are running their install script)
+or
+```sh
+sudo dnf install zsh
+```
 
-Then install additional scripts (including oh-my-zsh) using following command:
+### Set zsh as active shell
+```sh
+chsh username
+```
+### Install chezmoi
+
+Install [chezmoi](https://github.com/twpayne/chezmoi) by following their [INSTALL.md](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md) (notice that if you are using their install script it installs itself in .bin so beware where you are running their install script)
+
+### Install additional scripts (including oh-my-zsh)
 
 ```sh
 curl -sfL https://git.io/JkIKE | sh
@@ -20,7 +29,7 @@ curl -sfL https://git.io/JkIKE | sh
 
 After next login everything should work.
 
-# useful stuff
+# Useful stuff
 * [Quick start - chezmoi - documentation](https://www.chezmoi.io/quick-start/)
 
 # What's in there?
