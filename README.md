@@ -1,6 +1,6 @@
 dotfiles
 =============
-My precious bash configuration files. :sunglasses:
+My precious shell configuration files. :sunglasses:
 
 # Installation
 
