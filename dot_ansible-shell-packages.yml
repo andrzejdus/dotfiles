@@ -1,0 +1,24 @@
+---
+- name: "Basic packages that I use on every system"
+  become: yes
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: Install the latest version of basic terminal tools
+    ansible.builtin.package:
+      name:
+        - zsh
+        - neovim
+        - htop
+        - bat
+        - fd-find
+        - ripgrep
+        - nnn
+        - mc
+        - tldr
+        - curl
+        - wget
+        - links
+        - git
+      state: latest
+
