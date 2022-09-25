@@ -22,7 +22,7 @@ chsh username
 ```
 ### Install chezmoi
 
-Install [chezmoi](https://github.com/twpayne/chezmoi) by following their [INSTALL.md](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md) (notice that if you are using their install script it installs itself in .bin so beware where you are running their install script)
+Install [chezmoi](https://github.com/twpayne/chezmoi) by following their [installation instruction]([https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md](https://www.chezmoi.io/install/)) (notice that if you are using their install script it installs itself in .bin so beware where you are running their install script)
 
 ### Install shell tools and additional scripts (including oh-my-zsh)
 
