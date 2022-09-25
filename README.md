@@ -40,7 +40,7 @@ curl -sfL https://git.io/JkIKE | sh
 chezmoi apply
 ```
 
-### [optional] Install shell packages with ansible
+### [optional] Install shell tools with ansible
 
 ```sh
 ~/bin/install_shell_tools
