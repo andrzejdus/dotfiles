@@ -5,9 +5,13 @@ My precious bash configuration files. :sunglasses:
 # Installation
 
 ### Set up your private key
-Example `~/.ssh/id_rsa`
+Example location `~/.ssh/id_rsa`
 
 ### Install zsh
+```sh
+sudo pacman -Syu zsh
+```
+or
 ```sh
 sudo apt install zsh
 ```
@@ -24,10 +28,22 @@ chsh username
 
 Install [chezmoi](https://github.com/twpayne/chezmoi) by following their [installation instruction]([https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md](https://www.chezmoi.io/install/)) (notice that if you are using their install script it installs itself in .bin so beware where you are running their install script)
 
-### Install shell tools and additional scripts (including oh-my-zsh)
+### Install additional scripts (including oh-my-zsh) and initalize chezmoi
 
 ```sh
 curl -sfL https://git.io/JkIKE | sh
+```
+
+### Run chezmoi apply
+
+```sh
+chezmoi apply
+```
+
+### [optional] Install shell packages with ansible
+
+```sh
+~/bin/install_shell_tools
 ```
 
 After next login everything should work.
