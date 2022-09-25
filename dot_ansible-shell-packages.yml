@@ -11,7 +11,7 @@
         - neovim
         - htop
         - bat
-        - fd-find
+        - fd
         - ripgrep
         - nnn
         - mc
@@ -20,5 +20,6 @@
         - wget
         - links
         - git
+        - keychain
       state: latest
 
