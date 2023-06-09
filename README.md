@@ -4,8 +4,8 @@ My precious shell configuration files. :sunglasses:
 
 # Installation
 
-### Set up your private key
-Example location `~/.ssh/id_rsa`
+### Dotfiles repository access
+Set up your private key and configure write access to dotfiles repository (otherwise chezmoi init will fail).
 
 ### Install required tools
 ```sh
