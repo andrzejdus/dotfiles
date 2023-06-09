@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.local/bin:$PATH
+export PATH=/opt/watcom/binl64:$HOME/bin:/usr/local/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.local/bin:$PATH
+
+export WATCOM=/opt/watcom
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -85,6 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias n='nnn -dea'
+alias ls=exa
+alias la='ls -la'
 
 export NNN_PLUG='p:preview-tui'
 
