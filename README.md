@@ -7,17 +7,17 @@ My precious shell configuration files. :sunglasses:
 ### Set up your private key
 Example location `~/.ssh/id_rsa`
 
-### Install zsh
+### Install required tools
 ```sh
-sudo pacman -Syu zsh
+sudo pacman -Syu zsh git
 ```
 or
 ```sh
-sudo apt install zsh
+sudo apt install zsh git
 ```
 or
 ```sh
-sudo dnf install zsh
+sudo dnf install zsh git
 ```
 
 ### Set zsh as active shell
