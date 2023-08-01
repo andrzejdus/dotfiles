@@ -33,6 +33,7 @@ Install [chezmoi](https://github.com/twpayne/chezmoi) by following their [instal
 ```sh
 curl -sfL https://git.io/JkIKE | sh
 ```
+Make sure you have correct access rights to this repository.
 
 ### Run chezmoi apply
 
