@@ -93,7 +93,7 @@ alias la='ls -la'
 
 export NNN_PLUG='p:preview-tui'
 
-eval `keychain --eval --agents ssh id_rsa`
+type keychain && eval `keychain --eval --agents ssh id_rsa`
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

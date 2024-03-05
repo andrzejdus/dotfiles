@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "keychain not installed, using stub"
-
