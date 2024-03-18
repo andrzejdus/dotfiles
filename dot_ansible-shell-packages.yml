@@ -10,6 +10,7 @@
         - zsh
         - neovim
         - htop
+        - btop
         - bat
         - fd
         - ripgrep
@@ -21,5 +22,7 @@
         - links
         - git
         - keychain
+        - dust
+        - eza
       state: latest
 
