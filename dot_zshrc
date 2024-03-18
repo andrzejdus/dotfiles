@@ -56,6 +56,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=grey'
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    web-search
+    sudo
     zsh-syntax-highlighting
     zsh-autosuggestions
     history-substring-search
