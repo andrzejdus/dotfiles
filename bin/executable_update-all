@@ -8,12 +8,14 @@ no_color='\033[0m' # No Color
 
 for remote in $remotes_apt
 do
-    echo "${red}Connecting to ${remote}${no_color}"
+    echo -e "${red}Connecting to ${remote}${no_color}"
     ssh -t $remote 'sudo apt update && sudo apt upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
+    echo -e "${red}Disconnected from ${remote}${no_color}"
 done
 
 for remote in $remotes_yum
 do
-    echo "${red}Connecting to ${remote}${no_color}"
+    echo -e "${red}Connecting to ${remote}${no_color}"
     ssh -t $remote 'yum update'
+    echo -e "${red}Disconnected from ${remote}${no_color}"
 done
