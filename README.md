@@ -4,6 +4,16 @@ My precious shell configuration files. :sunglasses:
 
 # Installation
 
+## TL;DR
+* set up private key for repository access
+* install `zsh`
+* change shell to zsh `chsh username`
+* install `chezmoi`
+* download and initialize dotfiles `curl -sfL https://git.io/JkIKE | sh`
+* apply chezmoi `chezmoi apply`
+
+## Detailed installation steps
+
 ### Dotfiles repository access
 Set up your private key and configure write access to dotfiles repository (otherwise chezmoi init will fail).
 
