@@ -5,7 +5,7 @@ My precious shell configuration files. :sunglasses:
 # Installation
 
 ## TL;DR
-* set up private key for repository access
+* set up private key for repository access (trust your past self and really don't sikp that step)
 * install `zsh`
 * change shell to zsh `chsh username`
 * install `chezmoi`
@@ -36,7 +36,15 @@ chsh username
 ```
 ### Install chezmoi
 
-Install [chezmoi](https://github.com/twpayne/chezmoi) by following their [installation instruction]([https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md](https://www.chezmoi.io/install/)) (notice that if you are using their install script it installs itself in .bin)
+Install [chezmoi](https://github.com/twpayne/chezmoi)
+```sh
+sudo pacman -S chezmoi
+```
+or
+```sh
+sudo snap install chezmoi
+```
+or by following their [installation instruction]([https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md](https://www.chezmoi.io/install/)) (notice that if you are using their install script it installs itself in .bin)
 
 ### Install additional scripts (including oh-my-zsh) and initalize chezmoi
 
