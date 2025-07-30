@@ -5,7 +5,7 @@ My precious shell configuration files. :sunglasses:
 # Installation
 
 ## TL;DR
-* set up private key for repository access (trust your past self and really don't sikp that step)
+* set up private key for repository access (trust your past self and really don't skip that step)
 * install `zsh`
 * change shell to zsh `chsh username`
 * install `chezmoi`
