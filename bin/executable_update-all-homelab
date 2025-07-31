@@ -1,0 +1,16 @@
+#!/bin/bash
+
+apt_remotes=(
+    "ovh2.ds1.pl"
+    "andromeda.lan"
+    "black-hole.lan"
+    "root@proxima-centauri.lan"
+    "root@lunar-orbiter.lan"
+    "orbiter.lan"
+    "vega.lan"
+    "omada.lan"
+    "xo@xo-ce.lan"
+)
+#echo $apt_remotes[@]
+update-all "$(printf "%s " "${apt_remotes[@]}")" "root@m81.lan"
+
