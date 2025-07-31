@@ -4,6 +4,29 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+local launch_menu = {}
+
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  config.default_prog = { 'wsl' }
+
+  table.insert(launch_menu, {
+    label = 'Ubuntu',
+    args = { 'wsl.exe' },
+  })
+
+  table.insert(launch_menu, {
+    label = 'PowerShell',
+    args = { 'powershell.exe' },
+  })
+
+  table.insert(launch_menu, {
+    label = 'Command Prompt',
+    args = { 'cmd.exe' },
+  })
+end
+
+config.launch_menu = launch_menu
+
 -- This is where you actually apply your config choices.
 config.use_fancy_tab_bar = false
 
