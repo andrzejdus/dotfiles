@@ -124,3 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="/home/gogoad/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+export NODE_OPTIONS=--max_old_space_size=8192
+
+type fastfetch && fastfetch
