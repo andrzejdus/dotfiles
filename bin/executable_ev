@@ -9,7 +9,7 @@ do
   if [[ "$line" == *"Tunnel is up and running"* ]]; then
     echo "DNS config started"
     #sudo resolvectl dns ppp0 10.1.21.64 10.1.21.65
-    #sudo resolvectl domain ppp0 esfr-test.com.pl jira confluence
+    sudo resolvectl domain ppp0 euro.int.corp int.corp euro-test.com.pl
     echo "DNS config done"
     break
   fi
