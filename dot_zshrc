@@ -114,7 +114,7 @@ alias vivaldi='vivaldi-stable --password-store=gnome-libsecret --enable-features
 
 export NNN_PLUG='p:preview-tui'
 
-type keychain && eval `keychain --eval --agents ssh id_rsa`
+[[ ! "$SSH_AUTH_SOCK" == *"gcr/ssh"* ]] && type keychain && eval `keychain --eval id_rsa`
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
