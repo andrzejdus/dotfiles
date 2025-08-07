@@ -40,9 +40,12 @@ bindkey -v
 alias la='ls -la'
 alias z='zeditor'
 alias vivaldi='vivaldi-stable --password-store=gnome-libsecret --enable-features=UseOzonePlatform --ozone-platform=wayland'
+alias cz='chezmoi'
 
 alias n='nnn -dea'
 export NNN_PLUG='p:preview-tui'
+
+type bat && alias cat='bat -P'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
