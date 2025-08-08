@@ -57,8 +57,6 @@ set smartcase " ignore case if search pattern is all lowercase, case-sensitive o
 set modeline
 set ls=2
 
-set pastetoggle=<F2>
-
 " tab completion style
 set wildmode=longest,list,full
 set wildmenu
@@ -70,7 +68,6 @@ set guioptions-=l
 set guioptions-=L 
 set guioptions-=e 
 set guioptions-=m 
-set guioptions+=c 
 set guioptions-=T 
 if hostname == "Andrzejs-MacBook-Air"
   set gfn=Andale\ Mono:h13
