@@ -25,5 +25,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 chezmoi init git@github.com:andrzejdus/dotfiles.git
 git clone git@github.com:andrzejdus/dotfiles-private.git ~/.local/share/chezmoi-private
 
-echo "Remember to run chezmoi apply"
+echo "Remember to run chezmoi apply for both public and private repository"
 
