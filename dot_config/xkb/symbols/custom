@@ -1,0 +1,6 @@
+partial alphanumeric_keys
+xkb_symbols "superlsgt" {
+    include "pl(basic)"   // start from the normal Polish layou
+    key <LSGT> { [ Super_L ] };
+};
+
