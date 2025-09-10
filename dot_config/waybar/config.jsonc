@@ -2,9 +2,9 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "cpu", "temperature", "memory", "battery", "clock"],
+  "modules-right": ["network", "custom/bluetooth", "pulseaudio", "cpu", "temperature", "memory", "battery", "clock"],
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "<span>  </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -23,7 +23,7 @@
     "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
+    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid} {signalStrength}%",
     "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
@@ -39,20 +39,28 @@
       "on-click": "pavucontrol"
   },
   "cpu": {
-    "format": "<span foreground='#fab387'>  </span>{usage}%",
+    "format": "<span>  </span>{usage:>3}%",
     "tooltip": true,
     "interval": 1
   },
   "temperature": {
-    "format": "<span foreground='#f38ba8'> </span>{temperatureC}°C",
+    "format": "<span> </span>{temperatureC}°C",
     "thermal-zone": 0,
     "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
     "critical-threshold": 80,
     "interval": 1
   },
   "memory": {
-    "format": "<span foreground='#89b4fa'>  </span>{used:0.1f}G",
+    "format": "<span>  </span>{used:0.1f}G",
     "tooltip": true,
     "interval": 2
+  },
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth.sh",
+    "interval": 5,
+    "return-type": "json",
+    "format": "{}",
+    "markup": "pango",
+    "on-click": "blueman-manager"
   }
 }

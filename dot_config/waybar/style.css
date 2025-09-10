@@ -16,8 +16,8 @@ window#waybar {
 
 #window {
     margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 button {
@@ -69,6 +69,7 @@ button:hover {
 #network,
 #mode,
 #scratchpad {
+  color: @white;
   margin-top: 2px;
   margin-bottom: 2px;
   margin-left: 4px;
@@ -78,7 +79,6 @@ button:hover {
 }
 
 #clock {
-    color: @maroon;
 }
 
 #clock.date {
@@ -87,11 +87,9 @@ button:hover {
 }
 
 #pulseaudio {
-    color: @blue;
 }
 
 #network {
-    color: @yellow;
 }
 
 #idle_inhibitor {
@@ -104,7 +102,7 @@ button:hover {
 }
 
 #battery {
-    color: @green;
+    /*color: @green;*/
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -122,4 +120,16 @@ button:hover {
     border-radius: 15px;
     padding-left: 6px;
     padding-right: 6px;
+}
+
+#custom-bluetooth.connected {
+    color: @blue;
+}
+
+#custom-bluetooth.on {
+    color: @green;
+}
+
+#custom-bluetooth.off {
+    color: @red;
 }
