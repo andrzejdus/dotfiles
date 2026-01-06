@@ -57,3 +57,11 @@ export NODE_OPTIONS=--max_old_space_size=8192
 [[ ! "$SSH_AUTH_SOCK" == *"gcr/ssh"* ]] && type keychain && eval `keychain --eval id_rsa`
 
 type fastfetch && fastfetch
+
+docker-tags() {
+  curl -s "https://registry.hub.docker.com/v2/repositories/library/$1/tags?page_size=100" | jq -r '.results[].name'
+}
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
