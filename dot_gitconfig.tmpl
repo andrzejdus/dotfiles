@@ -5,7 +5,7 @@
 	st = status
 	co = checkout
 	ci = commit -v
-    lg = log --graph --decorate --color=always  --pretty=format:'%C(auto)%h%C(reset) %C(dim)%ad%C(reset) %s'  --date=short
+    lg = log --graph --decorate --color=always  --pretty=format:'%C(auto)%h%C(reset) %C(green)%ad%C(reset) %C(bold)%an%C(reset)%C(dim)<%ae>%C(reset) %s'  --date=short
 [color]
 	ui = auto
 [credential]
@@ -14,6 +14,7 @@
 	decorate = full
 [push]
 	default = upstream
+	autoSetupRemote = 1
 [core]
 	autocrlf = input
 [init]
@@ -22,4 +23,10 @@
 	branch = false
 	log = false
     diff = false
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 
