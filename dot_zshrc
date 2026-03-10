@@ -41,6 +41,7 @@ alias la='ls -la'
 alias z='zeditor'
 alias vivaldi='vivaldi-stable --password-store=gnome-libsecret --enable-features=UseOzonePlatform --ozone-platform=wayland'
 alias cz='chezmoi'
+alias gl='git lg | tac'
 
 alias n='nnn -dea'
 export NNN_PLUG='p:preview-tui'
